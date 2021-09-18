@@ -1,0 +1,14 @@
+{
+  "name": "user-enrichment",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "Tait Brown <taitbrown@gmail.com>",
+  "private": true,
+  "dependencies": {
+    "@octokit/rest": "^18.10.0",
+    "email-to-name": "^2.0.3",
+    "freemail": "^1.7.0",
+    "gravatar.js": "^2.0.0"
+  }
+}
