@@ -1,3 +1,6 @@
+
+![user-enrichment-about](https://user-images.githubusercontent.com/234593/135028707-9f1a5f60-0190-4cd4-86f6-8aa194f6e6bc.png)
+
 ## User Email Enrichment
 
 A free, open source alternative to FullContact, Clearbit etc. that relies only on information that has been shared publicly by the user. No authentication is required.
