@@ -5,7 +5,7 @@ const bestName = (ghProfile, gravProfile, inferredName) => {
     return gravatarName || githubName || gravatarDisplayName || inferredName;
 }
 
-const drop = obj => {
+const dropFalsey = obj => {
     return Object.keys(obj).reduce((acc, key) => {
         if (obj[key]) {
             acc[key] = obj[key]
@@ -29,7 +29,7 @@ const transform = (ghProfile, gravProfile, inferredName, companyFromEmail) => {
         githubUrl: ghProfile?.profile_url
     };
     return {
-        guess: drop(bestGuess),
+        guess: dropFalsey(bestGuess),
         profiles: {
             github: ghProfile,
             gravatar: gravProfile

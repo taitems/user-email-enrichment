@@ -6,12 +6,12 @@ const transform = require('./transform');
 
 const enrich = async (email) => {
 
-    console.log(`💧 Hydrating: ${email}`);
-
     return new Promise(async (resolve, reject) => {
         if (!email) {
-            return reject()
+            return reject('error')
         } else {
+
+            console.log(`💧 Hydrating: ${email}`);
 
             const nameFromEmail = emailToName.process(email);
             const companyFromEmail = getCompanyFromEmail(email);

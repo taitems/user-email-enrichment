@@ -1,4 +1,6 @@
-test.js
+manual.js
+dist/
+coverage/
 
 # Dependency directories
 node_modules/

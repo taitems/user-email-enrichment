@@ -5,10 +5,18 @@
   "license": "MIT",
   "author": "Tait Brown <taitbrown@gmail.com>",
   "private": true,
+  "scripts": {
+    "test": "jest --coverage",
+    "build": "esbuild src/index.js --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/index.js"
+  },
   "dependencies": {
     "@octokit/rest": "^18.10.0",
     "email-to-name": "^2.0.3",
     "freemail": "^1.7.0",
     "gravatar.js": "^2.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.13.3",
+    "jest": "^27.2.4"
   }
 }
