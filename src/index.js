@@ -10,18 +10,12 @@ const enrich = async (email) => {
         if (!email) {
             return reject('error')
         } else {
-
-            console.log(`💧 Hydrating: ${email}`);
-
             const nameFromEmail = emailToName.process(email);
             const companyFromEmail = getCompanyFromEmail(email);
             const ghProfile = await getGitHubInfo(email);
             const gravatar = await getGravatar(email);
-
             const data = transform(ghProfile, gravatar, nameFromEmail, companyFromEmail);
-
             resolve(data);
-
         }
     });
 
