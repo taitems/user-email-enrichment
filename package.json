@@ -1,6 +1,6 @@
 {
   "name": "enrich-email",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/node/index.js",
   "license": "MIT",
   "author": "Tait Brown <taitbrown@gmail.com>",
@@ -16,6 +16,21 @@
     "freemail-webpack": "^1.0.0",
     "gravatar.js": "^2.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taitems/user-email-enrichment.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taitems/user-email-enrichment/issues"
+  },
+  "homepage": "https://github.com/taitems/user-email-enrichment#readme",
+  "keywords": [
+    "enrich contact",
+    "identity resolution",
+    "email lookup",
+    "profile hydration",
+    "reverse lookup"
+  ],
   "devDependencies": {
     "esbuild": "^0.13.3",
     "jest": "^27.2.4",

@@ -1,6 +1,7 @@
 ![npm](https://img.shields.io/npm/v/enrich-email)
 
 ![user-enrichment-about](https://user-images.githubusercontent.com/234593/135028707-9f1a5f60-0190-4cd4-86f6-8aa194f6e6bc.png)
+![npm](https://img.shields.io/npm/dw/enrich-email)
 
 ## User Email Enrichment
 
