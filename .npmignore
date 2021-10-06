@@ -5,3 +5,4 @@ coverage/
 yarn-error.log
 manual.js
 .tool-versions
+*.test.js

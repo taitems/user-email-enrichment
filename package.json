@@ -1,6 +1,6 @@
 {
   "name": "enrich-email",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/node/index.js",
   "license": "MIT",
   "author": "Tait Brown <taitbrown@gmail.com>",
@@ -8,7 +8,7 @@
   "scripts": {
     "test": "jest --coverage",
     "build:web": "esbuild src/index.js --minify --bundle --target=chrome58,firefox57,safari11,edge18 --outfile=dist/web/index.js",
-    "build:node": "esbuild src/index.js --minify --platform=node --outfile=dist/node/index.js"
+    "build:node": "esbuild src/*.js --platform=node --target=node10.4 --outdir=dist/node"
   },
   "dependencies": {
     "@octokit/rest": "^18.10.0",
