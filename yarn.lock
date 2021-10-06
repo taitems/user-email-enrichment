@@ -1332,10 +1332,10 @@ form-data@^3.0.0:
     combined-stream "^1.0.8"
     mime-types "^2.1.12"
 
-freemail@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/freemail/-/freemail-1.7.0.tgz#c54b8bd11b1580d051909f866c665b6a46886eeb"
-  integrity sha512-XzEdol9AxxwDN5ISi+J560MgQRKTiGOTRFakRQLUQDEjr48hBMzU5Eo7c2U13zzz3IwcaD+54jWHJrg6/wqRNA==
+freemail-webpack@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/freemail-webpack/-/freemail-webpack-1.0.0.tgz#a3899979359fd2bae929543663068c4c7007fd91"
+  integrity sha1-o4mZeTWf0rrpKVQ2YwaMTHAH/ZE=
   dependencies:
     tldjs "^1.5.2"
 
@@ -2313,6 +2313,11 @@ psl@^1.1.33:
   resolved "https://registry.yarnpkg.com/psl/-/psl-1.8.0.tgz#9326f8bcfb013adcc005fdff056acce020e51c24"
   integrity sha512-RIdOzyoavK+hA18OGGWDqUTsCLhtA7IcZ/6NCs4fFJaHBDab+pDDmDIByWFRQJq2Cd7r1OoQxBGKOaztq+hjIQ==
 
+punycode@1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.3.2.tgz#9653a036fb7c1ee42342f2325cceefea3926c48d"
+  integrity sha1-llOgNvt8HuQjQvIyXM7v6jkmxI0=
+
 punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
@@ -2322,6 +2327,11 @@ punycode@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.1.1.tgz#b58b010ac40c22c5657616c8d2c2c02c7bf479ec"
   integrity sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==
+
+querystring@0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
+  integrity sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=
 
 react-is@^17.0.1:
   version "17.0.2"
@@ -2541,10 +2551,10 @@ throat@^6.0.1:
   resolved "https://registry.yarnpkg.com/throat/-/throat-6.0.1.tgz#d514fedad95740c12c2d7fc70ea863eb51ade375"
   integrity sha512-8hmiGIJMDlwjg7dlJ4yKGLK8EsYqKgPWbG3b4wjJddKNwc7N7Dpn08Df4szr/sZdMVeOstrdYSsqzX6BYbcB+w==
 
-tldjs@^1.5.2:
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/tldjs/-/tldjs-1.8.0.tgz#b9c16bd6de357b55ffcbe7d5be41f6b3ca76e3fa"
-  integrity sha1-ucFr1t41e1X/y+fVvkH2s8p24/o=
+tldjs@^1.5.2, tldjs@^2.2.0:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/tldjs/-/tldjs-2.3.1.tgz#cf09c3eb5d7403a9e214b7d65f3cf9651c0ab039"
+  integrity sha512-W/YVH/QczLUxVjnQhFC61Iq232NWu3TqDdO0S/MtXVz4xybejBov4ud+CIwN9aYqjOecEqIy0PscGkwpG9ZyTw==
   dependencies:
     punycode "^1.4.1"
 
@@ -2614,6 +2624,14 @@ universalify@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
   integrity sha512-rBJeI5CXAlmy1pV+617WB9J63U6XcazHHF2f2dbJix4XzpUF0RS3Zbj0FGIOCAva5P/d/GBOYaACQ1w+0azUkg==
+
+url@^0.11.0:
+  version "0.11.0"
+  resolved "https://registry.yarnpkg.com/url/-/url-0.11.0.tgz#3838e97cfc60521eb73c525a8e55bfdd9e2e28f1"
+  integrity sha1-ODjpfPxgUh63PFJajlW/3Z4uKPE=
+  dependencies:
+    punycode "1.3.2"
+    querystring "0.2.0"
 
 v8-to-istanbul@^8.1.0:
   version "8.1.0"

@@ -1,22 +1,30 @@
 {
-  "name": "user-enrichment",
+  "name": "enrich-email",
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "author": "Tait Brown <taitbrown@gmail.com>",
-  "private": true,
+  "private": false,
   "scripts": {
     "test": "jest --coverage",
-    "build": "esbuild src/index.js --minify --sourcemap --target=chrome58,firefox57,safari11,edge16 --outfile=dist/index.js"
+    "build:web": "esbuild src/index.js --minify --bundle --target=chrome58,firefox57,safari11,edge18 --outfile=dist/web/index.js",
+    "build:node": "esbuild src/index.js --minify --platform=node --outfile=dist/node/index.js"
   },
   "dependencies": {
     "@octokit/rest": "^18.10.0",
     "email-to-name": "^2.0.3",
-    "freemail": "^1.7.0",
+    "freemail-webpack": "^1.0.0",
     "gravatar.js": "^2.0.0"
   },
   "devDependencies": {
     "esbuild": "^0.13.3",
-    "jest": "^27.2.4"
+    "jest": "^27.2.4",
+    "url": "^0.11.0"
+  },
+  "resolutions": {
+    "tldjs": "^2.2.0"
+  },
+  "browser": {
+    "url": "url"
   }
 }
