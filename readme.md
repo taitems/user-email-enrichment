@@ -41,7 +41,7 @@ enrich('taitbrown@gmail.com').then(console.log)
 ```
 #### React
 
-Work in progress
+Work in progress.
 
 ### How does it work
 - Search for users by email address on **GitHub**
