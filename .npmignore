@@ -1,2 +1,5 @@
 src/
 example/
+coverage/
+yarn-error.log
+manual.js
