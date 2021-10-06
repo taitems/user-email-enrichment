@@ -11,7 +11,7 @@ A free, open source alternative to FullContact, Clearbit etc. that relies only o
 ### Installation
 Add to your project using your favourite package manager
 
-`yarn add user-enrichment` or `npm install user-enrichment`
+`yarn add enrich-email` or `npm install enrich-email`
 
 ### How does it work
 - Search for users by email address on **GitHub**
