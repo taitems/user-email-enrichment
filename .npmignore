@@ -1,8 +1,0 @@
-src/
-example/
-coverage/
-.github/
-yarn-error.log
-manual.js
-.tool-versions
-*.test.js
