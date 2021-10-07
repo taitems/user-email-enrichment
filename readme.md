@@ -1,6 +1,7 @@
 ![npm](https://img.shields.io/npm/v/enrich-email)
 ![npm](https://img.shields.io/npm/dw/enrich-email)
 ![GitHub Sponsors](https://img.shields.io/github/sponsors/taitems)
+![Build Status](https://img.shields.io/github/workflow/status/taitems/user-email-enrichment/Tests%20CI/main)
 
 ![user-enrichment-about](https://user-images.githubusercontent.com/234593/135028707-9f1a5f60-0190-4cd4-86f6-8aa194f6e6bc.png)
 
