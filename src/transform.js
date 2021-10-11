@@ -26,7 +26,8 @@ const transform = (ghProfile, gravProfile, inferredName, companyFromEmail) => {
         location: ghProfile?.location,
         twitterUsername: ghProfile?.twitter_username,
         twitterUrl: ghProfile?.twitter_username ? `https://twitter.com/${ghProfile.twitter_username}` : null,
-        githubUrl: ghProfile?.profile_url
+        githubUrl: ghProfile?.profile_url,
+        website: ghProfile?.website
     };
     return {
         guess: dropFalsey(bestGuess),
