@@ -1,18 +1,18 @@
 const transform = require('./transform');
 
 // Company test data
-const COMPANY_DOMAIN = 'example.com';
+const EXAMPLE_DOMAIN = 'example.com';
 
 // GitHub test data
 const GITHUB_USERNAME = 'Test Github Username';
 const GITHUB_NAME = 'Test Github Name';
-const GITHUB_AVATAR_URL = `http://${COMPANY_DOMAIN}/github-avatar-url`;
-const GITHUB_PROFILE_URL = `http://${COMPANY_DOMAIN}/github-profile-url`;
+const GITHUB_AVATAR_URL = `http://${EXAMPLE_DOMAIN}/github-avatar-url`;
+const GITHUB_PROFILE_URL = `http://${EXAMPLE_DOMAIN}/github-profile-url`;
 
 // Gravatar test data
 const GRAVATAR_DISPLAY_NAME = 'Test Gravater Display Name'
 const GRAVATAR_PREFERRED_USERNAME = 'Test Gravater Preferred Username'
-const GRAVATAR_PROFILE_URL = `http://${COMPANY_DOMAIN}/gravatar-profile-url`;
+const GRAVATAR_PROFILE_URL = `http://${EXAMPLE_DOMAIN}/gravatar-profile-url`;
 
 const generateTestData = () => {
     const ghProfile = {
@@ -37,7 +37,7 @@ const generateTestData = () => {
             urls: [],
             photos: [
                 {
-                    value: `http://${COMPANY_DOMAIN}/gravatar-photos-thumbnail-url`,
+                    value: `http://${EXAMPLE_DOMAIN}/gravatar-photos-thumbnail-url`,
                     type: 'thumbnail'
                 }
             ]
@@ -46,7 +46,7 @@ const generateTestData = () => {
 
     const nameFromEmail = 'test';
 
-    const companyFromEmail = COMPANY_DOMAIN;
+    const companyFromEmail = EXAMPLE_DOMAIN;
 
     return { ghProfile, gravProfile, nameFromEmail, companyFromEmail }
 }
@@ -58,7 +58,7 @@ test('If all arguments are given', async () => {
     // guess
     expect(guess.name).toBe(GITHUB_NAME);
     expect(guess.displayName).toBe(GRAVATAR_DISPLAY_NAME);
-    expect(guess.company).toBe(COMPANY_DOMAIN);
+    expect(guess.company).toBe(EXAMPLE_DOMAIN);
     expect(guess.avatar_url).toBe(GITHUB_AVATAR_URL);
     expect(guess.githubUrl).toBe(GITHUB_PROFILE_URL);
 
