@@ -6,13 +6,13 @@ const COMPANY_DOMAIN = 'example.com';
 // GitHub test data
 const GITHUB_USERNAME = 'Test Github Username';
 const GITHUB_NAME = 'Test Github Name';
-const GITHUB_AVATAR_URL = `http://test.${COMPANY_DOMAIN}/github-avatar-url`;
-const GITHUB_PROFILE_URL = `http://test.${COMPANY_DOMAIN}/github-profile-url`;
+const GITHUB_AVATAR_URL = `http://${COMPANY_DOMAIN}/github-avatar-url`;
+const GITHUB_PROFILE_URL = `http://${COMPANY_DOMAIN}/github-profile-url`;
 
 // Gravatar test data
 const GRAVATAR_DISPLAY_NAME = 'Test Gravater Display Name'
 const GRAVATAR_PREFERRED_USERNAME = 'Test Gravater Preferred Username'
-const GRAVATAR_PROFILE_URL = `http://test.${COMPANY_DOMAIN}/gravatar-profile-url`;
+const GRAVATAR_PROFILE_URL = `http://${COMPANY_DOMAIN}/gravatar-profile-url`;
 
 const generateTestData = () => {
     const ghProfile = {
@@ -37,7 +37,7 @@ const generateTestData = () => {
             urls: [],
             photos: [
                 {
-                    value: `http://test.${COMPANY_DOMAIN}/gravatar-photos-thumbnail-url`,
+                    value: `http://${COMPANY_DOMAIN}/gravatar-photos-thumbnail-url`,
                     type: 'thumbnail'
                 }
             ]
