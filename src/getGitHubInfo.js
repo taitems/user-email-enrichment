@@ -12,11 +12,11 @@ const getGitHubInfo = async email => {
         company: null,
         bio: null,
         twitter_username: null,
-        orgs: null,
+        orgs: null
     };
 
     const githubResult = await octokit.rest.search.users({
-        q: email,
+        q: email
     });
 
     const ghProfile = githubResult.data.items[0];
@@ -30,7 +30,7 @@ const getGitHubInfo = async email => {
     data.profile_url = ghProfile.html_url;
 
     const profile = await octokit.rest.users.getByUsername({
-        username: data.username,
+        username: data.username
     });
 
     data.website = profile.data.blog;
@@ -41,7 +41,7 @@ const getGitHubInfo = async email => {
     data.twitter_username = profile.data.twitter_username;
 
     const orgs = await octokit.rest.orgs.listForUser({
-        username: data.username,
+        username: data.username
     });
 
     data.orgs = orgs.data;

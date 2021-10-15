@@ -27,14 +27,14 @@ const transform = (ghProfile, gravProfile, inferredName, companyFromEmail) => {
             ? `https://twitter.com/${ghProfile.twitter_username}`
             : null,
         githubUrl: ghProfile?.profile_url,
-        website: ghProfile?.website,
+        website: ghProfile?.website
     };
     return {
         guess: dropFalsey(bestGuess),
         profiles: {
             github: ghProfile,
-            gravatar: gravProfile,
-        },
+            gravatar: gravProfile
+        }
     };
 };
 

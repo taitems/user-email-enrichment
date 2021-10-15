@@ -12,7 +12,7 @@ const getGravatar = async email => {
                 name,
                 displayName,
                 urls,
-                photos,
+                photos
             }) => {
                 return {
                     profileUrl,
@@ -20,7 +20,7 @@ const getGravatar = async email => {
                     name,
                     displayName,
                     urls,
-                    photos,
+                    photos
                 };
             }
         )

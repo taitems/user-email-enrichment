@@ -25,7 +25,7 @@ const generateTestData = () => {
         company: null,
         bio: null,
         twitter_username: null,
-        orgs: [],
+        orgs: []
     };
 
     const gravProfile = [
@@ -38,10 +38,10 @@ const generateTestData = () => {
             photos: [
                 {
                     value: `http://${EXAMPLE_DOMAIN}/gravatar-photos-thumbnail-url`,
-                    type: 'thumbnail',
-                },
-            ],
-        },
+                    type: 'thumbnail'
+                }
+            ]
+        }
     ];
 
     const nameFromEmail = 'test';
