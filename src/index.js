@@ -4,21 +4,22 @@ const getGitHubInfo = require('./getGitHubInfo');
 const getGravatar = require('./getGravatar');
 const transform = require('./transform');
 
-const enrich = async (email) => {
-
-    return new Promise(async (resolve, reject) => {
-        if (!email) {
-            return reject('error')
-        } else {
-            const nameFromEmail = emailToName.process(email);
-            const companyFromEmail = getCompanyFromEmail(email);
-            const ghProfile = await getGitHubInfo(email);
-            const gravatar = await getGravatar(email);
-            const data = transform(ghProfile, gravatar, nameFromEmail, companyFromEmail);
-            resolve(data);
-        }
-    });
-
-}
+const enrich = async email => {
+    if (!email) {
+        throw 'error';
+    } else {
+        const nameFromEmail = emailToName.process(email);
+        const companyFromEmail = getCompanyFromEmail(email);
+        const ghProfile = await getGitHubInfo(email);
+        const gravatar = await getGravatar(email);
+        const data = transform(
+            ghProfile,
+            gravatar,
+            nameFromEmail,
+            companyFromEmail
+        );
+        return data;
+    }
+};
 
 module.exports = enrich;

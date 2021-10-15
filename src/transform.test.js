@@ -10,8 +10,8 @@ const GITHUB_AVATAR_URL = `http://${EXAMPLE_DOMAIN}/github-avatar-url`;
 const GITHUB_PROFILE_URL = `http://${EXAMPLE_DOMAIN}/github-profile-url`;
 
 // Gravatar test data
-const GRAVATAR_DISPLAY_NAME = 'Test Gravater Display Name'
-const GRAVATAR_PREFERRED_USERNAME = 'Test Gravater Preferred Username'
+const GRAVATAR_DISPLAY_NAME = 'Test Gravatar Display Name';
+const GRAVATAR_PREFERRED_USERNAME = 'Test Gravatar Preferred Username';
 const GRAVATAR_PROFILE_URL = `http://${EXAMPLE_DOMAIN}/gravatar-profile-url`;
 
 const generateTestData = () => {
@@ -25,7 +25,7 @@ const generateTestData = () => {
         company: null,
         bio: null,
         twitter_username: null,
-        orgs: []
+        orgs: [],
     };
 
     const gravProfile = [
@@ -38,22 +38,28 @@ const generateTestData = () => {
             photos: [
                 {
                     value: `http://${EXAMPLE_DOMAIN}/gravatar-photos-thumbnail-url`,
-                    type: 'thumbnail'
-                }
-            ]
-        }
+                    type: 'thumbnail',
+                },
+            ],
+        },
     ];
 
     const nameFromEmail = 'test';
 
     const companyFromEmail = EXAMPLE_DOMAIN;
 
-    return { ghProfile, gravProfile, nameFromEmail, companyFromEmail }
-}
+    return { ghProfile, gravProfile, nameFromEmail, companyFromEmail };
+};
 
 test('If all arguments are given', async () => {
-    const { ghProfile, gravProfile, nameFromEmail, companyFromEmail } = generateTestData();
-    const { guess, profiles } = await transform(ghProfile, gravProfile, nameFromEmail, companyFromEmail);
+    const { ghProfile, gravProfile, nameFromEmail, companyFromEmail } =
+        generateTestData();
+    const { guess, profiles } = await transform(
+        ghProfile,
+        gravProfile,
+        nameFromEmail,
+        companyFromEmail
+    );
 
     // guess
     expect(guess.name).toBe(GITHUB_NAME);
@@ -66,7 +72,8 @@ test('If all arguments are given', async () => {
     expect(Object.keys(profiles).length).toBe(2);
 
     const { github, gravatar } = profiles;
-    const { ghProfile: ghProfile2, gravProfile: gravProfile2 } = generateTestData();
+    const { ghProfile: ghProfile2, gravProfile: gravProfile2 } =
+        generateTestData();
 
     // Check github data(profiles)
     expect(github.username).toBe(ghProfile2.username);
@@ -82,16 +89,18 @@ test('If all arguments are given', async () => {
 
     // Check gravatar data(profiles)
     expect(gravatar[0].profileUrl).toBe(gravProfile2[0].profileUrl);
-    expect(gravatar[0].preferredUsername).toBe(gravProfile2[0].preferredUsername);
+    expect(gravatar[0].preferredUsername).toBe(
+        gravProfile2[0].preferredUsername
+    );
     expect(gravatar[0].name.length).toBe(0);
     expect(gravatar[0].displayName).toBe(gravProfile2[0].displayName);
     expect(gravatar[0].urls.length).toBe(0);
     expect(gravatar[0].photos.length).toBe(1);
     expect(gravatar[0].photos[0].value).toBe(gravProfile2[0].photos[0].value);
     expect(gravatar[0].photos[0].type).toBe(gravProfile2[0].photos[0].type);
-})
+});
 
-test('If no argument is given', async() => {
+test('If no argument is given', async () => {
     const { guess, profiles } = await transform();
 
     // guess
@@ -101,4 +110,4 @@ test('If no argument is given', async() => {
     expect(Object.keys(profiles).length).toBe(2);
     expect(profiles.github).toBeUndefined();
     expect(profiles.gravatar).toBeUndefined();
-})
+});

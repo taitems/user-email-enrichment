@@ -1,9 +1,7 @@
-
-const { Octokit } = require("@octokit/rest");
+const { Octokit } = require('@octokit/rest');
 const octokit = new Octokit();
 
 const getGitHubInfo = async email => {
-
     const data = {
         username: null,
         avatar_url: null,
@@ -15,10 +13,10 @@ const getGitHubInfo = async email => {
         bio: null,
         twitter_username: null,
         orgs: null,
-    }
+    };
 
     const githubResult = await octokit.rest.search.users({
-        q: email
+        q: email,
     });
 
     const ghProfile = githubResult.data.items[0];
@@ -32,25 +30,23 @@ const getGitHubInfo = async email => {
     data.profile_url = ghProfile.html_url;
 
     const profile = await octokit.rest.users.getByUsername({
-        username: data.username
+        username: data.username,
     });
 
-    data.website = profile.data.blog
-    data.name = profile.data.name
-    data.location = profile.data.location
-    data.company = profile.data.company
-    data.bio = profile.data.bio
-    data.twitter_username = profile.data.twitter_username
+    data.website = profile.data.blog;
+    data.name = profile.data.name;
+    data.location = profile.data.location;
+    data.company = profile.data.company;
+    data.bio = profile.data.bio;
+    data.twitter_username = profile.data.twitter_username;
 
     const orgs = await octokit.rest.orgs.listForUser({
-        username: data.username
+        username: data.username,
     });
 
     data.orgs = orgs.data;
 
     return data;
-
-
-}
+};
 
 module.exports = getGitHubInfo;
