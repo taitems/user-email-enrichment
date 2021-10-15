@@ -101,5 +101,7 @@ As per the above, the accuracy is only as good as the publicly accessible inform
 
 ## Contributors
 
-- 🇦🇺 [Tait Brown](https://github.com/taitems) - Package creator
-- 🇮🇹 [Raffaele Calzà](https://github.com/raffaelecalza) - Added CI tests
+- 🇦🇺 [Tait Brown](https://github.com/taitems) - Package creator/maintainer
+- 🇮🇹 [Raffaele Calzà](https://github.com/raffaelecalza) - Got tests running on CI
+- 🇯🇵 [Yuki Shindo](https://github.com/shinshin86) - Added better test coverage 
+- 🇦🇺 [Thibaud Ducasse](https://github.com/tducasse) - DX (developer experience)
