@@ -5,25 +5,16 @@ const getGravatar = async email => {
 
     return (
         profiles &&
-        profiles.map(
-            ({
+        profiles.map(({ profileUrl, preferredUsername, name, displayName, urls, photos }) => {
+            return {
                 profileUrl,
                 preferredUsername,
                 name,
                 displayName,
                 urls,
                 photos
-            }) => {
-                return {
-                    profileUrl,
-                    preferredUsername,
-                    name,
-                    displayName,
-                    urls,
-                    photos
-                };
-            }
-        )
+            };
+        })
     );
 };
 

@@ -23,9 +23,7 @@ const transform = (ghProfile, gravProfile, inferredName, companyFromEmail) => {
         avatar_url: ghProfile?.avatar_url || gravProfile?.[0].photos?.[0].value,
         location: ghProfile?.location,
         twitterUsername: ghProfile?.twitter_username,
-        twitterUrl: ghProfile?.twitter_username
-            ? `https://twitter.com/${ghProfile.twitter_username}`
-            : null,
+        twitterUrl: ghProfile?.twitter_username ? `https://twitter.com/${ghProfile.twitter_username}` : null,
         githubUrl: ghProfile?.profile_url,
         website: ghProfile?.website
     };

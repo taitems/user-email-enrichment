@@ -12,12 +12,7 @@ const enrich = async email => {
         const companyFromEmail = getCompanyFromEmail(email);
         const ghProfile = await getGitHubInfo(email);
         const gravatar = await getGravatar(email);
-        const data = transform(
-            ghProfile,
-            gravatar,
-            nameFromEmail,
-            companyFromEmail
-        );
+        const data = transform(ghProfile, gravatar, nameFromEmail, companyFromEmail);
         return data;
     }
 };
