@@ -3,21 +3,19 @@ const bestName = (ghProfile, gravProfile, inferredName) => {
     const gravatarDisplayName = gravProfile?.[0]?.displayName;
     const githubName = ghProfile?.name;
     return gravatarName || githubName || gravatarDisplayName || inferredName;
-}
+};
 
 const dropFalsey = obj => {
     return Object.keys(obj).reduce((acc, key) => {
         if (obj[key]) {
-            acc[key] = obj[key]
+            acc[key] = obj[key];
         }
 
-        return acc
-    }, {})
-}
-
+        return acc;
+    }, {});
+};
 
 const transform = (ghProfile, gravProfile, inferredName, companyFromEmail) => {
-
     const bestGuess = {
         name: bestName(ghProfile, gravProfile, inferredName),
         displayName: gravProfile?.[0].displayName,
@@ -35,7 +33,7 @@ const transform = (ghProfile, gravProfile, inferredName, companyFromEmail) => {
             github: ghProfile,
             gravatar: gravProfile
         }
-    }
-}
+    };
+};
 
 module.exports = transform;

@@ -1,0 +1,21 @@
+{
+    "env": {
+        "node": true,
+        "es6": true,
+        "jest": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 2021
+    },
+    "root": true,
+    "extends": [
+        "eslint:recommended",
+        "prettier"
+    ],
+    "rules": {
+        "prettier/prettier": "warn"
+    },
+    "plugins": [
+        "prettier"
+    ]
+}
