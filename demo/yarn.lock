@@ -5174,10 +5174,10 @@ enquirer@^2.3.5:
   dependencies:
     ansi-colors "^4.1.1"
 
-enrich-email@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/enrich-email/-/enrich-email-0.0.7.tgz#e0d311740f6ff04c95a409e41c3115d16398afa6"
-  integrity sha512-M5Ys+Ep4SONFhn3E6ZU+LLPYqqV1GTjStPPK/pQXIjMOz35cKnsBQhw7/tEg/SkD49KKQMkR2qVYX7TrMTVndw==
+enrich-email@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/enrich-email/-/enrich-email-0.0.10.tgz#40e4fe9f7cd99dabf48fb62edfc74303f0214060"
+  integrity sha512-rJ7oKSgXSJVwQ5rdlZ5Jd6O+N5RtWqKpVg4f4tpda8RlpVfxKAnFHQSQFqutPwQ+oMIF8lyf5goGKN1JQVppQA==
   dependencies:
     "@octokit/rest" "^18.10.0"
     email-to-name "^2.0.3"
