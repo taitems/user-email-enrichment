@@ -2,10 +2,9 @@ import './App.css';
 import React, { useState } from 'react';
 import enrich from 'enrich-email/dist/web/esm';
 import { Flex, Box, Text, Heading, Input, Button } from "@chakra-ui/react"
-// import { FakeProfile } from './components/FakeProfile';
-import { FakeForm } from './components/FakeForm';
 import { ProfileCard } from './components/ProfileCard';
 import { RawData } from './components/RawData';
+import { RegisterCard } from './components/RegisterCard';
 
 function App() {
 
@@ -17,6 +16,7 @@ function App() {
     // console.log(input);
     enrich(input).then(data => {
       console.log(data)
+      setResult(null);
       setResult(data);
     });
   }
@@ -52,8 +52,7 @@ function App() {
           <Text>Please enter an email address to begin.</Text>
         )}
 
-        {result && outputMode === 'form' && <FakeForm result={result} />}
-        {/* {result && outputMode === 'profile' && <FakeProfile result={result} />} */}
+        {result && outputMode === 'form' && <RegisterCard result={result} />}
         {result && outputMode === 'profile' && <ProfileCard result={result} />}
         {result && outputMode === 'raw' && <RawData result={result} />}
       </Flex>
