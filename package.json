@@ -11,7 +11,12 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "enrich-email": "^0.0.10",
+    "eslint": "7",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.26.1",
     "framer-motion": "^4",
+    "prettier": "^2.4.1",
     "pretty-print-json": "^1.1.1",
     "react": "^17.0.2",
     "react-copy-to-clipboard": "^5.0.4",
@@ -23,7 +28,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src"
   },
   "eslintConfig": {
     "extends": [

@@ -1,65 +1,108 @@
-import { FormControl, FormLabel } from '@chakra-ui/form-control'
-import Icon from '@chakra-ui/icon'
-import { Input, InputGroup, InputLeftElement } from '@chakra-ui/input'
-import { Box, Heading, Stack } from '@chakra-ui/layout'
-import { Textarea } from '@chakra-ui/textarea'
-import { LocationMarkerIcon, OfficeBuildingIcon } from '@heroicons/react/solid'
-import React from 'react'
+import { Avatar } from '@chakra-ui/avatar';
+import { FormControl, FormLabel } from '@chakra-ui/form-control';
+import Icon from '@chakra-ui/icon';
+import { Input, InputGroup, InputLeftElement } from '@chakra-ui/input';
+import { Box, Center, Heading, Stack, Text } from '@chakra-ui/layout';
+import { Textarea } from '@chakra-ui/textarea';
+import { LocationMarkerIcon, OfficeBuildingIcon } from '@heroicons/react/outline';
+import React from 'react';
+import { Card } from './Card';
 
 export const RegisterCard = ({result}) => {
-    const { guess } = result;
-    return (
-        <Box w="100%" maxWidth="400px">
-        <Box
-            textAlign="left"
-            shadow="lg"
-            borderRadius="md"
-            p="4"
-            w="100%"
-        >
-            <Heading size="md" mb="2">Create profile</Heading>
+	const { guess } = result;
+	return (
+		<Box w="400px" maxWidth="100%" pt="12">
 
-            <Stack spacing={4}>
+			<Card>
+				<Center>
+					<Avatar src={guess.avatar_url} name={guess.name || guess.displayName}  size="xl" mt="-16" />
+				</Center>
+				<Text color="blue.700" fontSize="12" textAlign="center" my="3">(Edit profile picture)</Text>
 
-            <FormControl isRequired>
-                <FormLabel>Your name</FormLabel>
-                <Input placeholder="Your name" value={guess.name} />
-            </FormControl>
+				<Stack spacing={4}>
+
+					<FormControl isRequired>
+						<FormLabel>Name</FormLabel>
+						<Input placeholder="Your name" value={guess.name} readOnly />
+					</FormControl>
                 
-            <FormControl>
-                <FormLabel>Company</FormLabel>
+					<FormControl>
+						<FormLabel>Company</FormLabel>
 
-                <InputGroup>
-                    <InputLeftElement
-                        pointerEvents="none"
-                        children={<Icon color="gray.400" as={OfficeBuildingIcon} w={4} h={4} />}
-                    />
-                    <Input placeholder="Your company" value={guess.company} />
-                </InputGroup>
-            </FormControl>
+						<InputGroup>
+							<InputLeftElement
+								pointerEvents="none"
+								children={<Icon color="gray.400" as={OfficeBuildingIcon} w={4} h={4} />}
+							/>
+							<Input placeholder="Your company" value={guess.company} readOnly />
+						</InputGroup>
+					</FormControl>
                 
-            <FormControl>
-                <FormLabel>Location</FormLabel>
+					<FormControl>
+						<FormLabel>Location</FormLabel>
 
-                <InputGroup>
-                    <InputLeftElement
-                        pointerEvents="none"
-                        children={<Icon color="gray.400" as={LocationMarkerIcon} w={4} h={4} />}
-                    />
-                    <Input placeholder="Your location" value={guess.location} />
-                </InputGroup>
-            </FormControl>
+						<InputGroup>
+							<InputLeftElement
+								pointerEvents="none"
+								children={<Icon color="gray.400" as={LocationMarkerIcon} w={4} h={4} />}
+							/>
+							<Input placeholder="Your location" value={guess.location} readOnly />
+						</InputGroup>
+					</FormControl>
                 
-            <FormControl>
-                <FormLabel>Biography</FormLabel>
+					<FormControl>
+						<FormLabel>Biography</FormLabel>
+						<Textarea readOnly>{guess.bio}</Textarea>
+					</FormControl>
 
-                <Textarea>{guess.bio}</Textarea>
-            </FormControl>
+				</Stack>
+			</Card>
 
-            </Stack>
+			<Card>
+				<Heading size="md" mb="2">Your links</Heading>
 
+				<Stack spacing={4}>
+                
+					<FormControl>
+						<FormLabel>Website</FormLabel>
 
-        </Box>
-        </Box>
-    )
-}
+						<InputGroup>
+							<InputLeftElement
+								pointerEvents="none"
+								children={<Icon color="gray.400" as={LocationMarkerIcon} w={4} h={4} />}
+							/>
+							<Input placeholder="Your website" value={guess.website} readOnly />
+						</InputGroup>
+					</FormControl>
+                
+					<FormControl>
+						<FormLabel>Twitter</FormLabel>
+
+						<InputGroup>
+							<InputLeftElement
+								pointerEvents="none"
+								children={<Icon color="gray.400" as={LocationMarkerIcon} w={4} h={4} />}
+							/>
+							<Input placeholder="Your Twitter" value={guess.twitterUrl} readOnly />
+						</InputGroup>
+					</FormControl>
+                
+					<FormControl>
+						<FormLabel>GitHub</FormLabel>
+
+						<InputGroup>
+							<InputLeftElement
+								pointerEvents="none"
+								children={<Icon color="gray.400" as={LocationMarkerIcon} w={4} h={4} />}
+							/>
+							<Input placeholder="Your GitHub" value={guess.githubUrl} readOnly />
+						</InputGroup>
+					</FormControl>
+
+				</Stack>
+                
+			</Card>
+
+		</Box>
+	);
+};
