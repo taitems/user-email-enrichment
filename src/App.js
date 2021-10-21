@@ -34,7 +34,7 @@ function App() {
 	return (
 		<Flex minHeight="100vh" height="100%" width="100%" flexDirection={['column', null, 'row']}>
 			<Flex width={['100%',null,'40%']} py={[20,16, 0]} textAlign={['center', null, 'left']} height={['auto',null,'100vh']} justifyContent="center" flexDirection="column">
-				<Box px="8">
+				<Flex  alignItems="center" flexDirection="column" px="8">
 					<Text textTransform="uppercase" letterSpacing="0.035em" fontWeight="semibold" color="purple.700" fontSize="14">Demo</Text>
 					<Heading as="h1">Reverse Email Lookup</Heading>
 					<Text as="h2" width="66%" minWidth="300px">A free, open source identity resolution alternative to tools like FullContact and Clearbit. </Text>
@@ -53,7 +53,7 @@ function App() {
 					<Text fontSize="sm" mt="2">
           Or try an <Link color="blue.700" onClick={() => { setInput(EXAMPLE1); search(EXAMPLE1); }}>example search</Link>
 					</Text>
-				</Box>
+				</Flex>
 			</Flex>
 			<Flex width={['100%',null,'60%']} bg="gray.50" flexGrow="1" textAlign="center" flexDirection="column" alignItems="center">
 
@@ -74,13 +74,13 @@ function App() {
 					<Text>Please enter an email address to begin.</Text>
 				)}
 
-				{!loading && <Box position="fixed" right="20px" top="20px" marginLeft="-25px" zIndex="2">
+				{loading && <Box position="fixed" right="20px" top="20px" marginLeft="-25px" zIndex="2">
 					<Flex width="50px" height="50px" borderRadius="md" background="rgba(0,0,0,0.5)" alignItems="center" justifyContent="center">
 						<Spinner color="white" />
 					</Flex>
 				</Box>}
 
-				<Box opacity={loading ? .5 : 1}>
+				<Box opacity={loading ? .25 : 1}>
 					{result && outputMode === 'form' && <RegisterCard result={result} />}
 					{result && outputMode === 'profile' && <ProfileCard result={result} />}
 					{result && outputMode === 'raw' && <RawData result={result} />}
