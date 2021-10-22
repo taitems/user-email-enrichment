@@ -5,9 +5,11 @@
 
 ![user-enrichment-about](https://user-images.githubusercontent.com/234593/135028707-9f1a5f60-0190-4cd4-86f6-8aa194f6e6bc.png)
 
-# User Email Enrichment
+#### [VIEW DEMO](https://taitems.github.io/user-email-enrichment/)
 
+# User Email Enrichment
 A free, open source alternative to FullContact, Clearbit etc. that relies only on information that has been shared publicly by the user. No authentication is required.
+
 
 ## Installation
 Add to your project using your favourite package manager
@@ -104,4 +106,4 @@ As per the above, the accuracy is only as good as the publicly accessible inform
 - 🇦🇺 [Tait Brown](https://github.com/taitems) - Package creator/maintainer
 - 🇮🇹 [Raffaele Calzà](https://github.com/raffaelecalza) - Got tests running on CI
 - 🇯🇵 [Yuki Shindo](https://github.com/shinshin86) - Added better test coverage 
-- 🇦🇺 [Thibaud Ducasse](https://github.com/tducasse) - DX (developer experience)
+- 🇫🇷 [Thibaud Ducasse](https://github.com/tducasse) - DX (developer experience)
