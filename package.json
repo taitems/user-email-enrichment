@@ -1,7 +1,8 @@
 {
   "name": "demo",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "homepage": "https://taitems.github.io/user-email-enrichment/",
   "dependencies": {
     "@chakra-ui/react": "^1.6.9",
     "@emotion/react": "^11",
