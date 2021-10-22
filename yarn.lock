@@ -5170,10 +5170,10 @@ elliptic@^6.5.3:
     minimalistic-assert "^1.0.1"
     minimalistic-crypto-utils "^1.0.1"
 
-email-to-name@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/email-to-name/-/email-to-name-2.0.3.tgz#98cdb3d1c290eb56e0e25ee4107e20efb06484a9"
-  integrity sha512-4cZ3iajfqP6VLR9/kqcpeIuoPBy6XJkJrqZv6y6siQWXBXJJxvD9hYXZhxPMWqUO2SmXfa+tIk1vu7ixA29oXw==
+email-to-name@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/email-to-name/-/email-to-name-2.0.4.tgz#4440564f4b21158a28cc99e1b80bce30575ec785"
+  integrity sha512-K+lWoVwR42YIvwtALqtweXXUdftgb2ijG/aJtQslz5NTOHqqgxzurat3LHh79AeGzt8NKDpvoacfogtZecxEYg==
 
 emittery@^0.7.1:
   version "0.7.2"
@@ -5233,13 +5233,13 @@ enquirer@^2.3.5:
   dependencies:
     ansi-colors "^4.1.1"
 
-enrich-email@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/enrich-email/-/enrich-email-0.0.10.tgz#40e4fe9f7cd99dabf48fb62edfc74303f0214060"
-  integrity sha512-rJ7oKSgXSJVwQ5rdlZ5Jd6O+N5RtWqKpVg4f4tpda8RlpVfxKAnFHQSQFqutPwQ+oMIF8lyf5goGKN1JQVppQA==
+enrich-email@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/enrich-email/-/enrich-email-0.0.12.tgz#3da44192cf21b258e80d034c922b7af15b5c23ff"
+  integrity sha512-c/Q6ASJVFIukc8WBLs1aBYuSxnEblf6/08jRMB9PhK7EJczBPcOjFC/j4dsK0qMGmioNHRjwnjtMkydziKWkjA==
   dependencies:
     "@octokit/rest" "^18.10.0"
-    email-to-name "^2.0.3"
+    email-to-name "^2.0.4"
     freemail-webpack "^1.0.0"
     gravatar.js "^2.0.0"
 

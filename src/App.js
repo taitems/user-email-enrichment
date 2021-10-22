@@ -55,7 +55,7 @@ function App() {
 					</Tooltip>
 				</Box>
 				<Flex  alignItems={['center',null, null, 'flex-start']} flexDirection="column" px="8">
-					<Text textTransform="uppercase" letterSpacing="0.035em" fontWeight="semibold" color="purple.500" fontSize="14">Demo</Text>
+					<Text textTransform="uppercase" letterSpacing="0.035em" fontWeight="semibold" color="purple.500" fontSize="14" mb="3">Demo</Text>
 					<Heading as="h1">Reverse Email Lookup</Heading>
 					<Text as="h2" width="66%" minWidth="300px" mb="3">A free, open source identity resolution alternative to tools like FullContact and Clearbit. </Text>
 					<Box as="form" onSubmit={handleSubmit} w="100%" maxWidth="400px">

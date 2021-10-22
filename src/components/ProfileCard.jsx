@@ -18,7 +18,7 @@ export const ProfileCard = ({result}) => {
 			p="2"
 			pb="4"
 		>
-			<Img src="banner.jpg" width="385" height="108" alt="" borderRadius="4" mb="-8" />
+			<Img src="banner.jpg" width="385px" height="108px" alt="" borderRadius="4" mb="-8" />
 			<Box ml="3">
 				<Box borderRadius="4px" borderWidth="5px" borderStyle="solid" borderColor="white" display="inline-block" >
 					<Avatar src={guess.avatar_url} name={guess.name || guess.displayName}  borderRadius="none" size="lg"/>
@@ -61,9 +61,9 @@ export const ProfileCard = ({result}) => {
 							<Icon color="gray.400" as={TwitterIcon} w={4} h={4} mr={1} />{guess.twitterUsername}
 						</Flex>
 					)}
-					{guess.githubUrl && (
+					{guess.githubUrl && guess.githubUsername && (
 						<Flex as="a" href={guess.githubUrl} target="_blank" rel="noreferrer" alignItems="center" color="gray.600">
-							<Icon color="gray.400" as={GitHubIcon} w={4} h={4} mr={1} />{guess.githubUrl}
+							<Icon color="gray.400" as={GitHubIcon} w={4} h={4} mr={1} />{guess.githubUsername}
 						</Flex>
 					)}
 				</Stack>
