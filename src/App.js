@@ -73,7 +73,7 @@ function App() {
 						</InputGroup>
 					</Box>
 					<Text fontSize="sm" mt="2">
-          Or try an <Link color="blue.700" onClick={() => { setInput(EXAMPLE1); search(EXAMPLE1); }}>example search</Link>
+						Or try an <Link color="blue.700" onClick={() => { setInput(EXAMPLE1); search(EXAMPLE1); }}>example search</Link>
 					</Text>
 				</Flex>
 			</Flex>
@@ -84,7 +84,7 @@ function App() {
 						onClick={() => setOutputMode('form')}
 						variant={outputMode === 'form' ? 'solid' : 'ghost'}
 					>
-            Register
+						Register
 					</Button>
 					<Button onClick={() => setOutputMode('profile')}
 						variant={outputMode === 'profile' ? 'solid' : 'ghost'}>Profile</Button>
