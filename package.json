@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@octokit/rest": "^18.10.0",
-    "email-to-name": "^2.0.3",
+    "email-to-name": "^2.0.4",
     "freemail-webpack": "^1.0.0",
     "gravatar.js": "^2.0.0"
   },
