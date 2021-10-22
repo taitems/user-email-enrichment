@@ -3,15 +3,27 @@ import { FormControl, FormLabel } from '@chakra-ui/form-control';
 import Icon from '@chakra-ui/icon';
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/input';
 import { Box, Center, Heading, Stack, Text } from '@chakra-ui/layout';
+import { Tag, TagLabel, TagLeftIcon } from '@chakra-ui/tag';
 import { Textarea } from '@chakra-ui/textarea';
-import { LocationMarkerIcon, OfficeBuildingIcon } from '@heroicons/react/outline';
+import { LightBulbIcon, LocationMarkerIcon, OfficeBuildingIcon } from '@heroicons/react/outline';
 import React from 'react';
 import { Card } from './Card';
+import { GitHubIcon } from './GitHubIcon';
+import { TwitterIcon } from './TwitterIcon';
 
 export const RegisterCard = ({result}) => {
 	const { guess } = result;
 	return (
-		<Box w="400px" maxWidth="100%" pt="12">
+		<Box w="100%" maxWidth="400px">
+
+			<Tag size="md" colorScheme="orange" mb={2}>
+				<TagLeftIcon as={LightBulbIcon} mr={1} w={4} h={4} mt="-2px" />
+				<TagLabel textTransform="uppercase">Idea</TagLabel>
+			</Tag>
+
+			<Text fontSize="14" mb="24" color="gray.600">
+                An example registration or profile completion step in which a user&rsquo;s email address is used to fetch and prefill as much of the form as possible.
+			</Text>
 
 			<Card>
 				<Center>
@@ -59,45 +71,35 @@ export const RegisterCard = ({result}) => {
 			</Card>
 
 			<Card>
-				<Heading size="md" mb="2">Your links</Heading>
+				<Heading size="md" mb="2">Profile links</Heading>
 
 				<Stack spacing={4}>
-                
-					<FormControl>
-						<FormLabel>Website</FormLabel>
 
-						<InputGroup>
-							<InputLeftElement
-								pointerEvents="none"
-								children={<Icon color="gray.400" as={LocationMarkerIcon} w={4} h={4} />}
-							/>
-							<Input placeholder="Your website" value={guess.website} readOnly />
-						</InputGroup>
-					</FormControl>
+					<Text>Connect with me at these other sites</Text>
                 
-					<FormControl>
-						<FormLabel>Twitter</FormLabel>
+					<InputGroup>
+						<InputLeftElement
+							pointerEvents="none"
+							children={<Icon color="gray.400" as={LocationMarkerIcon} w={4} h={4} />}
+						/>
+						<Input placeholder="Your website" value={guess.website} readOnly />
+					</InputGroup>
 
-						<InputGroup>
-							<InputLeftElement
-								pointerEvents="none"
-								children={<Icon color="gray.400" as={LocationMarkerIcon} w={4} h={4} />}
-							/>
-							<Input placeholder="Your Twitter" value={guess.twitterUrl} readOnly />
-						</InputGroup>
-					</FormControl>
+					<InputGroup>
+						<InputLeftElement
+							pointerEvents="none"
+							children={<Icon color="gray.400" as={TwitterIcon} w={4} h={4} />}
+						/>
+						<Input placeholder="Your Twitter" value={guess.twitterUrl} readOnly />
+					</InputGroup>
                 
-					<FormControl>
-						<FormLabel>GitHub</FormLabel>
-
-						<InputGroup>
-							<InputLeftElement
-								pointerEvents="none"
-								children={<Icon color="gray.400" as={LocationMarkerIcon} w={4} h={4} />}
-							/>
-							<Input placeholder="Your GitHub" value={guess.githubUrl} readOnly />
-						</InputGroup>
-					</FormControl>
+					<InputGroup>
+						<InputLeftElement
+							pointerEvents="none"
+							children={<Icon color="gray.400" as={GitHubIcon} w={4} h={4} />}
+						/>
+						<Input placeholder="Your GitHub" value={guess.githubUrl} readOnly />
+					</InputGroup>
 
 				</Stack>
                 
