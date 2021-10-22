@@ -1,3 +1,11 @@
+# Deployment notes
+
+- Work in src on `gh-pages-src` branch, commit/merge/push to `gh-pages-src`.
+- CI/CD will then publish `gh-pages-src` folder `/build` to `gh-pages`
+
+----
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
