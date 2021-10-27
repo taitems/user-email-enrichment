@@ -21,7 +21,7 @@ export const ProfileCard = ({result}) => {
 			<Img src="banner.jpg" width="385px" height="108px" alt="" borderRadius="4" mb="-8" />
 			<Box ml="3">
 				<Box borderRadius="4px" borderWidth="5px" borderStyle="solid" borderColor="white" display="inline-block" >
-					<Avatar src={guess.avatar_url} name={guess.name || guess.displayName}  borderRadius="none" size="lg"/>
+					<Avatar src={guess.avatarUrl} name={guess.name || guess.displayName}  borderRadius="none" size="lg"/>
 				</Box>
 				<Flex justifyContent="space-between" alignItems="center" mt="2">
 					<Heading as="h2" fontSize="3xl">

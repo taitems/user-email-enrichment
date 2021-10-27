@@ -27,7 +27,7 @@ export const RegisterCard = ({result}) => {
 
 			<Card>
 				<Center>
-					<Avatar src={guess.avatar_url} name={guess.name || guess.displayName}  size="xl" mt="-16" />
+					<Avatar src={guess.avatarUrl} name={guess.name || guess.displayName}  size="xl" mt="-16" />
 				</Center>
 				<Text color="blue.700" fontSize="12" textAlign="center" my="3">(Edit profile picture)</Text>
 
