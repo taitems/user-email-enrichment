@@ -30,10 +30,11 @@ enrich('taitbrown@gmail.com').then(console.log)
 //     name: 'Tait Brown',
 //     displayName: 'taitems',
 //     company: 'A Cloud Guru',
-//     avatar_url: 'https://avatars.githubusercontent.com/u/234593?v=4',
+//     avatarUrl: 'https://avatars.githubusercontent.com/u/234593?v=4',
 //     location: 'Melbourne, Australia',
 //     twitterUsername: 'taitems',
 //     twitterUrl: 'https://twitter.com/taitems',
+//     githubUsername: 'taitems',
 //     githubUrl: 'https://github.com/taitems'
 //   },
 //   profiles: {
@@ -100,6 +101,10 @@ Not really a question, but okay! Keep in mind this only searching for publicly s
 #### It didn't find resolve the email address correctly?
 As per the above, the accuracy is only as good as the publicly accessible information about a particular user. It makes a series of guesses and dynamically reprioritises results based on perceived accuracy (Pending release).
 
+
+## Breaking chages
+#### `0.0.13`
+ - Changed `guess.avatar_url` to `guess.avatarUrl` to standardise casing
 
 ## Contributors
 

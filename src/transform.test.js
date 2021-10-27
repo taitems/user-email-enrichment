@@ -59,7 +59,7 @@ test('If all arguments are given', async () => {
     expect(guess.name).toBe(GITHUB_NAME);
     expect(guess.displayName).toBe(GRAVATAR_DISPLAY_NAME);
     expect(guess.company).toBe(EXAMPLE_DOMAIN);
-    expect(guess.avatar_url).toBe(GITHUB_AVATAR_URL);
+    expect(guess.avatarUrl).toBe(GITHUB_AVATAR_URL);
     expect(guess.githubUrl).toBe(GITHUB_PROFILE_URL);
     expect(guess.githubUsername).toBe(GITHUB_USERNAME);
 
