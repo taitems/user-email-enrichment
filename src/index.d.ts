@@ -44,6 +44,7 @@ type GravatarProfile = {
     currentLocation?: string
     urls?: [GravatarUrl]
     photos?: [GravatarPhoto]
+    accounts?: [any]
 }
 type Profile = {
     guess?: ProfileGuess,
