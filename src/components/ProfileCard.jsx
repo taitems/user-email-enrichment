@@ -1,22 +1,24 @@
 import { Avatar, Button, Img } from '@chakra-ui/react';
 import Icon from '@chakra-ui/icon';
 import { Box, Divider, Flex, Heading, Stack, Text } from '@chakra-ui/layout';
-// import { LocationMarkerIcon, OfficeBuildingIcon, LinkIcon } from '@heroicons/react/solid';
 import { LinkIcon } from '@heroicons/react/solid';
 import React from 'react';
 import { TwitterIcon } from './TwitterIcon';
 import { GitHubIcon } from './GitHubIcon';
+import { Card } from './Card';
 
 export const ProfileCard = ({result}) => {
 	const { guess } = result;
 
 	return (
-		<Box
+		<Card
 			textAlign="left"
 			shadow="lg"
 			borderRadius="md"
 			p="2"
 			pb="4"
+			width="385px"
+			boxSizing="content-box"
 		>
 			<Img src="banner.jpg" width="385px" height="108px" alt="" borderRadius="4" mb="-8" />
 			<Box ml="3">
@@ -29,14 +31,15 @@ export const ProfileCard = ({result}) => {
 					</Heading>
 					<Button size="sm" variant="outline" tabIndex="-1">Follow</Button>
 				</Flex>
-				<p>
-					{guess.bio}
-				</p>
 
-				{(guess.location || guess.company) && <Text color="gray.800">
+				{(guess.location || guess.company) && <Text color="gray.500">
 					{guess.location} {guess.location && '-'} {guess.company}
 				</Text>
 				}
+
+				<Text my={2.5} color="gray.700" lineHeight={1.66} fontSize={14}>
+					{guess.bio}
+				</Text>
 
 				<Divider borderColor="gray.300" w="30px" my="3" />
 
@@ -69,6 +72,6 @@ export const ProfileCard = ({result}) => {
 				</Stack>
 			</Box>
 
-		</Box>
+		</Card>
 	);
 };

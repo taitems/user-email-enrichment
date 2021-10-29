@@ -5233,10 +5233,10 @@ enquirer@^2.3.5:
   dependencies:
     ansi-colors "^4.1.1"
 
-enrich-email@^0.0.13:
-  version "0.0.13"
-  resolved "https://registry.yarnpkg.com/enrich-email/-/enrich-email-0.0.13.tgz#66b55921b6db982d42b0f05c5317e5611eec3bcc"
-  integrity sha512-/g9eaKVViM6BaYyNC/PpnmTNFJnBJNA8DZEY5kZuoRoD7gu6+2Ezthet3i2fNLyjsV3sl8MmT3TIbbLMo4a5/g==
+enrich-email@^0.0.16:
+  version "0.0.16"
+  resolved "https://registry.yarnpkg.com/enrich-email/-/enrich-email-0.0.16.tgz#78d41aae3d87f775627d6257e23c7e4560cca2ea"
+  integrity sha512-W+rkIp/q4Banwj2XzrQuADGV/CmhILmMVCmZkIKTDEpYC5j5aQa+AmhazJSqgRz5bewcaA6yc6BE92p//+yN6A==
   dependencies:
     "@octokit/rest" "^18.10.0"
     email-to-name "^2.0.4"
