@@ -1,9 +1,5 @@
-const bestName = (ghProfile, gravProfile, inferredName) => {
-    const gravatarName = gravProfile?.[0]?.name?.formatted;
-    const gravatarDisplayName = gravProfile?.[0]?.displayName;
-    const githubName = ghProfile?.name;
-    return gravatarName || githubName || gravatarDisplayName || inferredName;
-};
+const pickBestName = require('./pick/pickBestName');
+const pickTwitterUsername = require('./pick/pickTwitterUsername');
 
 const dropFalsey = obj => {
     return Object.keys(obj).reduce((acc, key) => {
@@ -15,14 +11,16 @@ const dropFalsey = obj => {
 };
 
 const transform = (ghProfile, gravProfile, inferredName, companyFromEmail) => {
+    const twitterUsername = pickTwitterUsername(ghProfile, gravProfile);
+
     const bestGuess = {
-        name: bestName(ghProfile, gravProfile, inferredName),
+        name: pickBestName(ghProfile, gravProfile, inferredName),
         displayName: gravProfile?.[0].displayName,
         company: ghProfile?.company || companyFromEmail,
         avatarUrl: ghProfile?.avatar_url || gravProfile?.[0].photos?.[0].value,
         location: gravProfile?.[0].currentLocation || ghProfile?.location,
-        twitterUsername: ghProfile?.twitter_username,
-        twitterUrl: ghProfile?.twitter_username ? `https://twitter.com/${ghProfile.twitter_username}` : null,
+        twitterUsername: twitterUsername,
+        twitterUrl: twitterUsername ? `https://twitter.com/${twitterUsername}` : null,
         githubUrl: ghProfile?.profile_url,
         githubUsername: ghProfile?.username,
         bio: gravProfile?.[0].aboutMe || ghProfile?.bio,
