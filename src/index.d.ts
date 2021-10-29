@@ -40,6 +40,8 @@ type GravatarProfile = {
         formatted: string
     }
     displayName?: string
+    aboutMe?: string
+    currentLocation?: string
     urls?: [GravatarUrl]
     photos?: [GravatarPhoto]
 }
