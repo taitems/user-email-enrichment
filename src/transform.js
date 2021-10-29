@@ -10,7 +10,6 @@ const dropFalsey = obj => {
         if (obj[key]) {
             acc[key] = obj[key];
         }
-
         return acc;
     }, {});
 };
@@ -21,11 +20,12 @@ const transform = (ghProfile, gravProfile, inferredName, companyFromEmail) => {
         displayName: gravProfile?.[0].displayName,
         company: ghProfile?.company || companyFromEmail,
         avatarUrl: ghProfile?.avatar_url || gravProfile?.[0].photos?.[0].value,
-        location: ghProfile?.location,
+        location: gravProfile?.[0].currentLocation || ghProfile?.location,
         twitterUsername: ghProfile?.twitter_username,
         twitterUrl: ghProfile?.twitter_username ? `https://twitter.com/${ghProfile.twitter_username}` : null,
         githubUrl: ghProfile?.profile_url,
         githubUsername: ghProfile?.username,
+        bio: gravProfile?.[0].aboutMe || ghProfile?.bio,
         website: ghProfile?.website
     };
     return {
