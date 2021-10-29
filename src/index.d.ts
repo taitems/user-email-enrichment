@@ -21,7 +21,7 @@ type GitHubProfile = {
     company?: string
     bio?: string
     twitter_username?: string
-    orgs?: array
+    orgs?: [any]
 }
 type GravatarPhoto = {
     value: URL,
@@ -50,4 +50,4 @@ type Profile = {
         gravatar?: GravatarProfile
     }
 };
-declare function enrich(email: string): Profile
+export declare function enrich(email: string): Profile
