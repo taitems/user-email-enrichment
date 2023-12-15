@@ -1,8 +1,8 @@
-const emailToName = require('email-to-name');
-const getCompanyFromEmail = require('./getCompanyFromEmail');
-const getGitHubInfo = require('./getGitHubInfo');
-const getGravatar = require('./getGravatar');
-const transform = require('./transform');
+import emailToName from 'email-to-name';
+import { getCompanyFromEmail } from './getCompanyFromEmail.js';
+import { getGitHubInfo } from './getGitHubInfo.js';
+import { getGravatar } from './getGravatar.js';
+import { transform } from './transform.js';
 
 const enrich = async email => {
     if (!email) {
@@ -12,9 +12,8 @@ const enrich = async email => {
         const companyFromEmail = getCompanyFromEmail(email);
         const ghProfile = await getGitHubInfo(email);
         const gravatar = await getGravatar(email);
-        const data = transform(ghProfile, gravatar, nameFromEmail, companyFromEmail);
-        return data;
+        return transform(ghProfile, gravatar, nameFromEmail, companyFromEmail);
     }
 };
 
-module.exports = enrich;
+export default enrich;

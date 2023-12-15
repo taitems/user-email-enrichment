@@ -1,22 +1,21 @@
 {
   "name": "enrich-email",
-  "version": "0.0.16",
+  "version": "1.0.0",
   "main": "dist/node/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "author": "Tait Brown <taitbrown@gmail.com>",
   "private": false,
+  "type": "module",
   "scripts": {
-    "test": "jest --coverage",
-    "test:ci": "jest",
-    "test:watch": "jest --watch",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js src/ --coverage",
+    "test:ci": "node --experimental-vm-modules node_modules/jest/bin/jest.js src/",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js src/ --watch",
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "copy:types": "copyfiles -f src/index.d.ts dist",
-    "build": "npm run build:iife && npm run build:esm && npm run build:node && npm run copy:types",
-    "build:iife": "esbuild src/index.js --minify --bundle --target=chrome58,firefox57,safari11,edge18 --outfile=dist/web/iife.js",
-    "build:esm": "esbuild src/index.js --minify --bundle --target=chrome58,firefox57,safari11,edge18 --format=esm --outfile=dist/web/esm.js",
-    "build:node": "esbuild src/*.js --platform=node --target=node10.4 --outdir=dist/node"
+    "build": "npm run build:node && npm run copy:types",
+    "build:node": "esbuild src/**  --platform=node --target=node16 --outdir=./dist"
   },
   "dependencies": {
     "@octokit/rest": "^18.10.0",
@@ -45,7 +44,7 @@
     "eslint": "^8.0.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "jest": "^27.2.4",
+    "jest": "^29.7.0",
     "prettier": "^2.4.1",
     "url": "^0.11.0"
   },

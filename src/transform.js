@@ -1,5 +1,5 @@
-const pickBestName = require('./pick/pickBestName');
-const pickTwitterUsername = require('./pick/pickTwitterUsername');
+import { pickBestName } from './pickBestName.js';
+import { pickTwitterUsername } from './pickTwitterUsername.js';
 
 const dropFalsey = obj => {
     return Object.keys(obj).reduce((acc, key) => {
@@ -10,7 +10,7 @@ const dropFalsey = obj => {
     }, {});
 };
 
-const transform = (ghProfile, gravProfile, inferredName, companyFromEmail) => {
+export const transform = (ghProfile, gravProfile, inferredName, companyFromEmail) => {
     const twitterUsername = pickTwitterUsername(ghProfile, gravProfile);
 
     const bestGuess = {
@@ -34,5 +34,3 @@ const transform = (ghProfile, gravProfile, inferredName, companyFromEmail) => {
         }
     };
 };
-
-module.exports = transform;

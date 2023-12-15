@@ -1,4 +1,4 @@
-const pickTwitterUsername = require('./pickTwitterUsername');
+import { pickTwitterUsername } from './pickTwitterUsername.js';
 
 const GITHUB_TWITTER = 'fakeone';
 const GRAVATAR_TWITTER = 'faketwo';

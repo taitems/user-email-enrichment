@@ -1,4 +1,5 @@
-const { Octokit } = require('@octokit/rest');
+import { Octokit } from '@octokit/rest';
+
 const octokit = new Octokit();
 
 const getGitHubInfo = async email => {
@@ -49,4 +50,4 @@ const getGitHubInfo = async email => {
     return data;
 };
 
-module.exports = getGitHubInfo;
+export { getGitHubInfo };

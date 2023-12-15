@@ -5,4 +5,4 @@ const pickBestName = (ghProfile, gravProfile, inferredName) => {
     return gravatarName || githubName || gravatarDisplayName || inferredName;
 };
 
-module.exports = pickBestName;
+export { pickBestName };

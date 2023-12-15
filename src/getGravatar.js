@@ -1,4 +1,4 @@
-const gravatar = require('gravatar.js');
+import gravatar from 'gravatar.js';
 
 const getGravatar = async email => {
     const profiles = await gravatar.profiles(email);
@@ -33,4 +33,4 @@ const getGravatar = async email => {
     );
 };
 
-module.exports = getGravatar;
+export { getGravatar };

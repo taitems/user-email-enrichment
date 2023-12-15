@@ -21,9 +21,11 @@ Add to your project using your favourite package manager
 ### Node
 
 ```js
-const enrich = require('enrich-email');
+import enrich from 'enrich-email';
 
-enrich('taitbrown@gmail.com').then(console.log)
+const data = await enrich('taitbrown@gmail.com');
+
+console.log(data);
 
 // {
 //   guess: {
@@ -45,40 +47,7 @@ enrich('taitbrown@gmail.com').then(console.log)
 //       website: 'http://taitbrown.com',
 // --- TRIMMED ---
 ```
-### React
 
-Please note: you need to directly import the **esm version** from the package.
-
-```js
-import React, { useState } from 'react';
-// Important to directly import the ESM file
-import enrich from 'enrich-email/dist/web/esm';
-
-function App() {
-
-  const [input, setInput] = useState('taitbrown@gmail.com');
-
-  const handleClick = () => {
-      enrich(input).then(console.log);
-  }
-
-  return (
-    <>
-      <div>
-          <input type="email" value={input} onChange={e => { setInput(e.target.value)}} />
-          <button onClick={handleClick}>Submit</button>
-      </div>
-    </>
-  )
-}
-
-export default App;
-
-```
-
-### Other web
-
-There is an IIFE exported under `enrich-email/dist/web/iife`
 
 ## How does it work
 - Search for users by email address on **GitHub**
@@ -103,6 +72,9 @@ As per the above, the accuracy is only as good as the publicly accessible inform
 
 
 ## Breaking chages
+#### `1.0.0`
+  - Changed type to `module`
+  - Went to Node first approach, using `import` instead of `require`
 #### `0.0.13`
  - Changed `guess.avatar_url` to `guess.avatarUrl` to standardise casing
 
