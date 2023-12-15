@@ -10,4 +10,4 @@ const pickTwitterUsername = (ghProfile, gravProfile) => {
     return fromGithub || fromGravatar;
 };
 
-module.exports = pickTwitterUsername;
+export { pickTwitterUsername };

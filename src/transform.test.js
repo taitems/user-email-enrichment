@@ -1,4 +1,4 @@
-const transform = require('./transform');
+import { transform } from './transform.js';
 
 // Company test data
 const EXAMPLE_DOMAIN = 'example.com';

@@ -1,11 +1,12 @@
 {
     "env": {
         "node": true,
-        "es6": true,
+        "browser": true,
         "jest": true
     },
     "parserOptions": {
-        "ecmaVersion": 2021
+        "ecmaVersion": "latest",
+        "sourceType": "module"
     },
     "root": true,
     "extends": [

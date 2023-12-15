@@ -1,4 +1,4 @@
-const getCompanyFromEmail = require('./getCompanyFromEmail');
+import { getCompanyFromEmail } from './getCompanyFromEmail';
 
 test('Company detection', () => {
     expect(getCompanyFromEmail('hello@gmail.com')).toBe(null);
