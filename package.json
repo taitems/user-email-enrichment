@@ -1,7 +1,7 @@
 {
   "name": "enrich-email",
   "version": "1.0.0",
-  "main": "dist/node/index.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "author": "Tait Brown <taitbrown@gmail.com>",
